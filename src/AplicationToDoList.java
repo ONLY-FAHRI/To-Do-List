@@ -1,21 +1,18 @@
-import java.util.Scanner;
-
-
 public class AplicationToDoList {
+
+    public static java.util.Scanner sc = new java.util.Scanner(System.in);
 
     public static String[] dataMain = new String[10];
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
 
 
 
 
-        testRemoveFromDoList();
+        testInput();
 
     }
-
 
 
 
@@ -127,6 +124,20 @@ public class AplicationToDoList {
 
     }
 
+    public  static String input (String info){
+        System.out.print(info+" : ");
+        String data = sc.nextLine();
+        return data;
+
+    }
+
+    public  static void testInput(){
+        String name = input("Nama");
+        System.out.println("Hi "+name);
+
+        var channel = input("Channel");
+        System.out.println(channel);
+    }
 
     /**
      * menampilkan view menambahkan to do list
